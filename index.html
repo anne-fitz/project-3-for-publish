@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+	<script src="/script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+	<script src="/jquery.js"></script>
+	<script src="/offline-script.js"></script>
+	<link rel="stylesheet" href="/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+		rel="stylesheet">
+		<title>My Diary</title> </head>
+</head>
+
+<body>
+	<div id="offline-world">
+		<form id="offline-world-form">
+			<input type="text" id="offline-id" class="form-group" placeholder="Let it go...">
+			<button class="btn-primary" type="submit">Submit</button>
+		</form>
+	</div>
+
+	<div id="online-world">
+		<div id="introduction">
+			<div id="intro-cloud">
+
+			</div>
+		</div>
+
+		<form class="container" id="contactForm">
+			<div class="card">
+				<div class="card-body">
+					<div class="form-group">
+						<label for="exampleFormControlInput1">
+							TITLE:
+						</label>
+						<input type="text" class="form-control" id="title" placeholder="December 4, 2024">
+					</div>
+
+					<div class="form-group">
+						<label for="exampleFormControlInput1">
+							DIARY ENTRY:
+						</label>
+						<input type="diary" class="form-control" id="diary" placeholder="Share your thoughts...">
+					</div>
+
+					<div class="form-group">
+						<label for="exampleFormControlInput1">
+							COLOR:
+						</label>
+						<input type="color" class="form-control" id="color" placeholder="blue">
+					</div>
+					<button type="submit" class="btn-primary"">
+						SUBMIT 
+					</button>
+				</div>
+
+			</div>
+		</form>
+		<div class=" buttons">
+						<button class="shuffleButton" type="button">
+							SHUFFLE
+						</button>
+						<button id="destroyButton" type="button">SELF DESTRUCT</button>
+
+				</div>
+				<div id="confirmDialog" class="hidden">
+					<p id="dynamicText">This will be replaced with the variable value.</p>
+					<button id="confirmYes">Yes</button>
+					<button id="confirmNo">No</button>
+				</div>
+				<div id="dataDisplay"></div>
+			</div>
+			<div id="inputConfirmDialog" class="hidden">
+				<p id="inputDynamicText">This will be replaced with the variable value.</p>
+				<button id="inputConfirmYes">OKAY</button>
+			</div>
+</body>
+
+</html>
